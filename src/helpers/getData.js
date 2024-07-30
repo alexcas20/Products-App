@@ -10,3 +10,12 @@ export const getData = () => {
      
     })
 }
+
+export const getItemId = (id) => {
+    return new Promise((resolve, reject) => {
+        const item = data.find((el) => el.id  === id);
+        
+
+         (item) ? resolve(item) : reject({error: "No se encontro el producto"})
+    })
+}

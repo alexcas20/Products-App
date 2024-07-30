@@ -101,3 +101,35 @@
 }
 
 }
+
+/* Detail products */
+
+.detail-container{
+  margin: 1rem;
+  padding: 2rem;
+  display: flex;
+  width: 600px;
+  height: 220px;
+  background-color: #baf3e363;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #3b413f31;
+
+}
+
+.producto-img{
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.producto-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.producto-info .precio{
+  font-weight: bolder;
+  font-size: x-large;
+}
