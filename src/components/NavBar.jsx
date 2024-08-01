@@ -1,23 +1,54 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Modal } from "./modal/Modal";
+
+import closeIcon from "../../public/icons/close.png";
+import linesIcon from "../../public/icons/lines.png";
+
 export const NavBar = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [iconButton, setIconButton] = useState(linesIcon);
+
+  const closeModal = () => {
+    setOpenModal(!openModal);
+    if (iconButton === linesIcon) {
+      setIconButton(closeIcon);
+    } else setIconButton(linesIcon);
+  };
+
   return (
-    <nav className="navbar">
-      <a href="#" className="logo">
-        <h1>LionShop</h1>
-      </a>
-      <ul className="menu">
-        <li className="menu-link">
-          <a href="#">Inicio</a>
-        </li>
-        <li className="menu-link">
-          <a href="#">Nosotros</a>
-        </li>
-        <li className="menu-link">
-          <a href="#">Productos</a>
-        </li>
-        <li className="menu-link">
-          <a href="#">Contacto</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className="navbar">
+        <Link to="/" className="logo">
+          <h1>LionShop</h1>
+        </Link>
+
+        <button onClick={closeModal} className="nav-close">
+          <img style={{ width: "35px" }} src={iconButton} />
+        </button>
+        <ul className="menu">
+          <li className="menu-link">
+            <Link to="/">Inicio</Link>
+          </li>
+          <li className="menu-link">
+            <Link to="/productos">Productos</Link>
+          </li>
+          <li className="menu-link">
+            <Link to="/productos/medias">Medias</Link>
+          </li>
+          <li className="menu-link">
+            <Link to="/productos/pantalones">Pantalones</Link>
+          </li>
+          <li className="menu-link">
+            <Link to="/productos/playeras">Playeras</Link>
+          </li>
+          <li className="menu-link">
+            <Link to="/productos/sudaderas">Sudaderas</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Modal showModal={openModal} closeModal={closeModal}  />
+    </>
   );
 };

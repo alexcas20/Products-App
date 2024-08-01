@@ -1,18 +1,20 @@
-import { ItemDetailContainer } from "./components/ItemDetailContainer"
-import { ItemListContainer } from "./components/ItemListContainer"
-import { NavBar } from "./components/NavBar"
-
+import { NavBar } from "./components/NavBar";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouting } from "./routes/AppRouting";
+import { useState } from "react";
 
 function App() {
-  
+
+ 
 
   return (
     <>
-      <NavBar/>
-      {/* <ItemListContainer/> */}
-      <ItemDetailContainer itemId={2}/>
+      <BrowserRouter>
+        <NavBar/>
+        <AppRouting />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
