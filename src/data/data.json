@@ -42,7 +42,7 @@
         "categoria": "sudaderas",
         "imagen": "http://dummyimage.com/200x100.png/5fa2dd/ffffff",
         "precio": 1500,
-        "stock": 10
+        "stock": 5
     },
     {
         "id": 6,

@@ -136,9 +136,9 @@
       1fr
     )
   );
-  background-color: #baf3e363;
+  /* background-color: #baf3e363;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px #3b413f31;
+  box-shadow: 2px 2px 10px #3b413f31; */
 
 }
 
@@ -161,10 +161,62 @@
   font-size: x-large;
 }
 
+/* Item Count  */
+
+.container-count{
+  margin-top: 10px;
+  display: flex;
+}
+
+.container-count p {
+  padding: 5px 10px;
+  font-weight: bolder;
+}
+
+.container-count-btn{
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 0;
+  border: 1px solid #05d5701e ;
+  border-radius: 8px;
+  background-color: #05d57188;
+  width: 30px;
+  cursor: pointer;
+  transition: all .11s ease;
+}
+
+
+.container-count-btn:hover{
+  background-color: #fdfffee6;
+  border: 1px solid #05d57188;
+}
+
+.container-count-add{
+  margin-top: 10px;
+  border: 1px solid  #05d57188 ;
+  background-color: #05d57188;
+  padding: 8px;
+  border-radius: 8px;
+  color: #2c2727c8;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.container-count-add:hover{
+  background-color: #ffffffd0;
+  color: #000;
+}
+
 /* Medias */
 
 /* NavBar */
 @media(width < 650px ){
+
+  .product{
+   width: 250px;
+  }
+
   .navbar .menu{
     display: none;
   }
@@ -231,10 +283,20 @@
 
 }
 
+/* redimensionar en mobile caja items */
+@media (width < 600px){
+    .product{
+      width: 320px;
+    }
 
+    
+}
 
-@media (width < 400px ) {
+/* detail dimension */
 
+@media (width < 480px ) {
+
+  
 
   .producto-img{
     display: block;
@@ -242,7 +304,7 @@
   }
 
   .producto-img img{
-    width: 100%;
+    width: 80%;
   }
 
   .producto-info{

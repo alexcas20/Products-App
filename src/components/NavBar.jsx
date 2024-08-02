@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "./modal/Modal";
 
-import closeIcon from "../../public/icons/close.png";
-import linesIcon from "../../public/icons/lines.png";
+import closeIcon from "/icons/close.png";
+import linesIcon from "/icons/lines.png";
 
 export const NavBar = () => {
   const [openModal, setOpenModal] = useState(false);
