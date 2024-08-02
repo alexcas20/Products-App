@@ -45,6 +45,9 @@ export const NavBar = () => {
           <li className="menu-link">
             <Link to="/productos/sudaderas">Sudaderas</Link>
           </li>
+          <li className="menu-link">
+            <Link to="/contacto">Contacto</Link>
+          </li>
         </ul>
       </nav>
 

@@ -32,6 +32,9 @@ export const Modal = ({ showModal, closeModal }) => {
             <li className="menu-link">
               <Link to="/productos/sudaderas" onClick={openModal}>Sudaderas</Link>
             </li>
+            <li className="menu-link">
+              <Link to="/contacto" onClick={openModal}>Contacto</Link>
+            </li>
           </ul>
         </nav>
       )}
