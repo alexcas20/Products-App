@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { CartWidget } from "../CartWidget/CartWidget";
 
 export const Modal = ({ showModal, closeModal }) => {
   console.log(showModal);
@@ -35,6 +36,7 @@ export const Modal = ({ showModal, closeModal }) => {
             <li className="menu-link">
               <Link to="/contacto" onClick={openModal}>Contacto</Link>
             </li>
+            <li className="menu-link" onClick={openModal}><CartWidget/></li>
           </ul>
         </nav>
       )}

@@ -4,6 +4,7 @@ import { Modal } from "./modal/Modal";
 
 import closeIcon from "/icons/close.png";
 import linesIcon from "/icons/lines.png";
+import { CartWidget } from "./CartWidget/CartWidget";
 
 export const NavBar = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -48,6 +49,7 @@ export const NavBar = () => {
           <li className="menu-link">
             <Link to="/contacto">Contacto</Link>
           </li>
+          <li className="menu-link"><CartWidget/></li>
         </ul>
       </nav>
 
