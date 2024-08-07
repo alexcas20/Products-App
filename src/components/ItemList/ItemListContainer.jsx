@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getData } from "../../helpers/getData";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config"
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -10,16 +11,17 @@ export const ItemListContainer = () => {
   const categoria = useParams().categoria;
 
   useEffect(() => {
-    getData().then((res) => {
-      if (categoria != undefined) {
-        const filtro = res.filter((prod) => prod.categoria === categoria);
-        setProducts(filtro);
-        setTitulo(categoria);
-      } else{
-        setProducts(res);
-        setTitulo("productos");
-      } 
-    });
+  
+      const productosRef = collection(db, "productos");
+
+      getDocs(productosRef)
+        .then((resp) => {
+          setProducts(resp.docs.map((doc) => {
+            return {...doc.data(), id: doc.id}
+          }))
+        })
+
+    
   }, [categoria]);
 
   return (
