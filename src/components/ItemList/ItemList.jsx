@@ -1,4 +1,4 @@
-import { Item } from "./Item"
+import { Item } from "../ItemList/Item"
 
 export const ItemList = ({products, titulo}) => {
   return (
