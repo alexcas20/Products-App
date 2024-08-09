@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Modal } from "./modal/Modal";
+import { Modal } from "./Modal/Modal";
 
 import closeIcon from "/icons/close.png";
 import linesIcon from "/icons/lines.png";
